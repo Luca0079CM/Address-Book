@@ -1,4 +1,4 @@
-package example.addressBook;
+package it.turing.addressBook.model;
 import java.util.ArrayList;
 
 public class Rubrica {
@@ -9,21 +9,21 @@ public class Rubrica {
 		this.rubrica = new ArrayList<Persona>();
 	}
 	
-	ArrayList<Persona> getRurbica(){
+	public ArrayList<Persona> getRubrica(){
 		return this.rubrica;
 	}
 	
-	void setRubrica(ArrayList<Persona> rubrica) {
+	public void setRubrica(ArrayList<Persona> rubrica) {
 		this.rubrica = rubrica;
 	}
 
-	void addPersona(String nome, String cognome, String indirizzo, 
+	public void addPersona(String nome, String cognome, String indirizzo, 
 			String telefono, String eta) {
 		Persona p = new Persona(nome, cognome, indirizzo, telefono, eta);
 		rubrica.add(p);
 	}
 	
-	void updatePersona(Persona p, String nome, String cognome, String indirizzo, 
+	public void updatePersona(Persona p, String nome, String cognome, String indirizzo, 
 			String telefono, String eta) {
 		p.setNome(nome);
 		p.setCognome(cognome);
@@ -32,7 +32,7 @@ public class Rubrica {
 		p.setEta(eta);
 	}
 	
-	void deletePersona(Persona p) {
+	public void deletePersona(Persona p) {
 		boolean found = false;
 		for(Persona per : rubrica){
 			if(per.getNome() == p.getNome() && per.getCognome() == p.getCognome()) {

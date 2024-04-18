@@ -1,4 +1,4 @@
-package example.addressBook;
+package it.turing.addressBook.model;
 
 public class Persona {
 	
